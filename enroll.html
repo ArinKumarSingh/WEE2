@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style-enroll.css" />
+    <link href="images/favicon.ico" rel="icon" />
+    <link href="images/favicon.ico" rel="apple-touch-icon" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Contact</h1>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input
+          type="hidden"
+          name="access_key"
+          value="efcc831b-02a1-4d51-b0f1-b02ddcb09250"
+        />
+        <div class="txt_field">
+          <input type="text" name="name" id="name" required />
+          <span></span>
+          <label>Full Name</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="text" name="email" id="email" required />
+          <span></span>
+          <label>Email</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="text" name="message" id="message" required />
+          <span></span>
+          <label>Message</label>
+        </div>
+
+        <input type="submit" value="Submit" />
+
+        <input type="hidden" name="_template" value="table" />
+
+        <div class="homePage_link">
+          <a href="index.html">Back to Home page</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

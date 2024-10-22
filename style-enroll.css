@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(140deg,#78e2e2, #eb3204);
+  height: 100vh;
+  overflow: hidden;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+
+
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #02a7e9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+.homePage_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+}
+.homePage_link a{
+  color: var(--clr);
+  text-decoration: none;
+}
+.homePage_link a:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1024px) {
+    .center {   
+      margin-top: 70px;
+      padding: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    body {
+      height: auto; /* Set height to auto for better mobile display */
+      overflow: auto; /* Allow scrolling if content overflows */
+    }
+    
+    .center {
+      width: 90%; /* Make the center div take 90% width */
+      height: auto; /* Allow height to adjust based on content */
+      max-height: 90vh; /* Limit the height to 90% of viewport height */
+      border-radius: 15px; /* Keep some border radius for aesthetics */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+      margin: 5% auto; /* Center it and add margin from top/bottom */
+      overflow: auto; /* Allow scrolling if content is too long */
+      padding: 30px; /* Add padding inside the center div */
+    }
+    
+    .center h1 {
+      font-size: 24px; /* Adjust heading size for better visibility */
+    }
+  
+    .txt_field input {
+      height: 50px; /* Increase input height for better usability */
+    }
+    
+    input[type="submit"] {
+      height: 60px; /* Adjust button height for mobile */
+      font-size: 20px; /* Adjust button font size */
+    }
+  }
+  

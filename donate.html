@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation Payment System</title>
+    <link rel="stylesheet" href="style-donate.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <h1>Sir Syed Library - Donate Now</h1>
+        <button id="donateButton" onclick="showDonateForm()">Donate</button>
+
+        <div id="donateForm" class="donate-form">
+          <label for="amount" id="donatet">Donation Amount:</label>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            placeholder="Enter amount"
+            required
+          />
+          <button id="generateQRButton" onclick="generateQR()">
+            Generate QR Code
+          </button>
+        </div>
+        <div id="scan"><h3>Scan this code and Pay through any UPI</h3></div>
+        <div class="qr-container">
+          <div id="qrcode" class="qrcode"></div>
+        </div>
+        <div id="thankYouMessage">Thank you for donating!</div>
+      </div>
+
+      <div class="homePage_link">
+        <a href="index.html">Back to Home page</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
