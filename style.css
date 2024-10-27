@@ -44,7 +44,7 @@ a {
 }
 
 header {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
     display: flex;
     justify-content: space-around;
@@ -84,7 +84,7 @@ header {
     /* Media query for smaller screens */
     @media (max-width: 768px) {
         #logo-text {
-            font-size: 20px; /* Smaller font size for mobile */
+            font-size: 25px; /* Smaller font size for mobile */
         }
     }
   }
@@ -121,6 +121,13 @@ header {
         position: absolute;
         top: 20px;
         right: 20px;
+      }
+      @media (max-width: 480px) {
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 48px; /* Mobile par size ko bada karna */
       }
     }
   }
@@ -242,15 +249,10 @@ h1 {
     span {
       @media (max-width: 768px) {
         display: none;
+        padding: 15px;
       }
     }
-    .call-to-action {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      a {
-        margin-right: 10px;
-        margin-bottom: 10px;
-      }
+  
     }
 
     .social-links {
@@ -280,7 +282,7 @@ h1 {
       /* margin-bottom: 10px; */
     }
   }
-}
+
 
 
 .logos {
@@ -330,7 +332,7 @@ h2 {
     color: var(--base);
   }
   @media (max-width: 1024px) {
-    font-size: 34px;
+    font-size: 30px;
   }
 }
 
@@ -560,7 +562,7 @@ h3 {
     .chat-info {
       flex: 3;
       margin-top: 22px;
-      padding-right: 30px;
+      padding-right: 20px;
     
     }
 
@@ -681,3 +683,8 @@ footer{
     margin-left: -10px;
 }
 
+@media (max-width: 480px) {
+  #pic {
+      background-image: url('./images/IMG_1874.JPG'); /* Mobile image ka path */
+  }
+}

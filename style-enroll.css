@@ -75,7 +75,6 @@ form .txt_field{
   width: 100%;
 }
 
-
 input[type="submit"]{
   width: 100%;
   height: 50px;
@@ -111,36 +110,57 @@ input[type="submit"]:hover{
       margin-top: 70px;
       padding: 20px;
     }
-  }
+}
 
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     body {
-      height: auto; /* Set height to auto for better mobile display */
-      overflow: auto; /* Allow scrolling if content overflows */
+      height: auto;
+      overflow: auto;
     }
     
     .center {
-      width: 90%; /* Make the center div take 90% width */
-      height: auto; /* Allow height to adjust based on content */
-      max-height: 90vh; /* Limit the height to 90% of viewport height */
-      border-radius: 15px; /* Keep some border radius for aesthetics */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-      margin: 5% auto; /* Center it and add margin from top/bottom */
-      overflow: auto; /* Allow scrolling if content is too long */
-      padding: 30px; /* Add padding inside the center div */
+      width: 90%;
+      height: auto;
+      max-height: 90vh;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 5% auto;
+      overflow: auto;
+      padding: 30px;
     }
     
     .center h1 {
-      font-size: 24px; /* Adjust heading size for better visibility */
+      font-size: 24px;
     }
   
     .txt_field input {
-      height: 50px; /* Increase input height for better usability */
+      height: 50px;
     }
     
     input[type="submit"] {
-      height: 60px; /* Adjust button height for mobile */
-      font-size: 20px; /* Adjust button font size */
+      height: 60px;
+      font-size: 20px;
     }
+}
+
+@media only screen and (max-width: 480px) {
+  .center {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10% auto;
   }
   
+  .center h1 {
+    font-size: 22px;
+  }
+
+  .txt_field input {
+    height: 55px;
+    font-size: 18px;
+  }
+  
+  input[type="submit"] {
+    height: 65px;
+    font-size: 20px;
+  }
+}
