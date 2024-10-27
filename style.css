@@ -78,8 +78,15 @@ header {
    
       #logo-text {
         flex: 2;
-        font-size: 27px;
-      }
+        font-size: 27px; /* Default font size */
+    }
+    
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+        #logo-text {
+            font-size: 20px; /* Smaller font size for mobile */
+        }
+    }
   }
   
   
@@ -551,6 +558,7 @@ h3 {
     }
     .chat-info {
       flex: 3;
+      margin-top: 22px;
       padding-right: 30px;
     
     }
