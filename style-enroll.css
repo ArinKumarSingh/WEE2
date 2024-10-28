@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body{
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(140deg,#78e2e2, #eb3204);
+
+body {
+  background: linear-gradient(140deg, #78e2e2, #eb3204);
   height: 100vh;
   overflow: hidden;
 }
-.center{
+
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,23 +21,27 @@ body{
   width: 400px;
   background: white;
   border-radius: 10px;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
-.center h1{
+
+.center h1 {
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid silver;
 }
-.center form{
+
+.center form {
   padding: 0 40px;
   box-sizing: border-box;
 }
-form .txt_field{
+
+form .txt_field {
   position: relative;
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
 }
-.txt_field input{
+
+.txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -45,7 +50,8 @@ form .txt_field{
   background: none;
   outline: none;
 }
-.txt_field label{
+
+.txt_field label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -53,9 +59,10 @@ form .txt_field{
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
-.txt_field span::before{
+
+.txt_field span::before {
   content: '';
   position: absolute;
   top: 40px;
@@ -63,19 +70,21 @@ form .txt_field{
   width: 0%;
   height: 2px;
   background: #2691d9;
-  transition: .5s;
+  transition: 0.5s;
 }
+
 .txt_field input:focus ~ label,
-.txt_field input:valid ~ label{
+.txt_field input:valid ~ label {
   top: -5px;
   color: #2691d9;
 }
+
 .txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before{
+.txt_field input:valid ~ span::before {
   width: 100%;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   width: 100%;
   height: 50px;
   border: 1px solid;
@@ -86,61 +95,64 @@ input[type="submit"]{
   font-weight: 700;
   cursor: pointer;
   outline: none;
+  transition: 0.5s;
 }
-input[type="submit"]:hover{
+
+input[type="submit"]:hover {
   border-color: #2691d9;
-  transition: .5s;
 }
-.homePage_link{
+
+.homePage_link {
   margin: 30px 0;
   text-align: center;
   font-size: 14px;
   color: #666666;
 }
-.homePage_link a{
+
+.homePage_link a {
   color: var(--clr);
   text-decoration: none;
 }
-.homePage_link a:hover{
+
+.homePage_link a:hover {
   text-decoration: underline;
 }
 
+/* Responsive Styles */
 @media only screen and (max-width: 1024px) {
-    .center {   
-      margin-top: 70px;
-      padding: 20px;
-    }
+  .center {
+    margin-top: 70px;
+    padding: 20px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    body {
-      height: auto;
-      overflow: auto;
-    }
-    
-    .center {
-      width: 90%;
-      height: auto;
-      max-height: 90vh;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin: 5% auto;
-      overflow: auto;
-      padding: 30px;
-    }
-    
-    .center h1 {
-      font-size: 24px;
-    }
-  
-    .txt_field input {
-      height: 50px;
-    }
-    
-    input[type="submit"] {
-      height: 60px;
-      font-size: 20px;
-    }
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  .center {
+    width: 90%;
+    max-height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+    padding: 30px;
+  }
+
+  .center h1 {
+    font-size: 24px;
+  }
+
+  .txt_field input {
+    height: 50px;
+  }
+
+  input[type="submit"] {
+    height: 60px;
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -149,7 +161,7 @@ input[type="submit"]:hover{
     padding: 10px 5px;
     margin: 10% auto;
   }
-  
+
   .center h1 {
     font-size: 22px;
   }
@@ -158,9 +170,10 @@ input[type="submit"]:hover{
     height: 55px;
     font-size: 18px;
   }
-  
+
   input[type="submit"] {
     height: 65px;
     font-size: 20px;
   }
 }
+

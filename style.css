@@ -40,17 +40,23 @@ a {
 .large-text {
   font-size: 22px;
   margin-bottom: 15px;
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 
 header {
-    padding-top: 5px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-around;
-    max-width: 1440px;
-    margin: auto;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 5px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1440px;
+  margin: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 480px) {
+    padding-bottom: 0;
+    margin-top: -10px;
+    margin-bottom: -50px;
+  }
 
   .logo-holder {
     display: flex;
@@ -60,36 +66,32 @@ header {
     color: var(--base-800);
 
     .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url(./images/logo.jpeg);
-        height: 100px;
-        width: 100px;
-        margin-left: -100px;
-        border-radius: 50%;
-        background-size: cover; /* Image ko div mein cover karne ke liye */
-        background-position: center; /* Image ko center mein rakhne ke liye */
-      }
-      .logo:hover {
-        transform: scale(1.9); /* Image ko bada karne ke liye */
-      }
-
-   
-      #logo-text {
-        flex: 2;
-        font-size: 27px; /* Default font size */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(./images/logo.jpeg);
+      height: 100px;
+      width: 100px;
+      margin-left: -100px;
+      border-radius: 50%;
+      background-size: cover; /* Image ko div mein cover karne ke liye */
+      background-position: center; /* Image ko center mein rakhne ke liye */
     }
-    
+
+    #logo-text {
+      flex: 2;
+      font-size: 27px; /* Default font size */
+    }
+
     /* Media query for smaller screens */
     @media (max-width: 768px) {
-        #logo-text {
-            font-size: 25px; /* Smaller font size for mobile */
-        }
+      #logo-text {
+        margin-right: -40px;
+        font-size: 25px; /* Smaller font size for mobile */
+      }
     }
   }
-  
-  
+
   nav {
     display: flex;
     margin-right: -100px;
@@ -127,7 +129,7 @@ header {
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: 48px; /* Mobile par size ko bada karna */
+        font-size: 36px; /* Mobile par size ko bada karna */
       }
     }
   }
@@ -158,7 +160,6 @@ header {
     }
   }
 }
-
 
 section {
   max-width: 1440px;
@@ -210,7 +211,8 @@ section {
     font-size: 100%; /* Reduce font size */
   }
 
-  .button.white, .button.black {
+  .button.white,
+  .button.black {
     font-size: 100%; /* Further adjustment for white and black buttons */
   }
 }
@@ -224,19 +226,17 @@ h1 {
     font-weight: 100;
   }
   @media (max-width: 768px) {
-    font-size: 40px; 
+    font-size: 40px;
     white-space: nowrap;
-     
   }
 }
 
 .hero {
   display: flex;
   @media (max-width: 768px) {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
-
 
   .hero-blue {
     flex: 1.02;
@@ -246,44 +246,52 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    span {
-      @media (max-width: 768px) {
-        display: none;
-        padding: 15px;
-      }
-    }
-  
-    }
-
-    .social-links {
-      margin-left: 20px;
-        margin-top: 10px;
-       display: flex;
-       gap: 30px;
-      a {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-  .hero-yellow {
-    flex: 1;
-    height: 420px;
-    background-color: var(--yellow);
-    border-radius: 30px;
-    padding: 0px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    img {
-      margin-top: -60px;
-      max-width: 390px;
-      /* margin-bottom: 10px; */
-    }
   }
 
+  @media (max-width: 480px) {
+    .hero-blue {
+      flex: 1; /* Flex ko 1 kar dena phone pe */
+      padding: 15px;
+      margin-top: 20px;
+    }
 
+    .hero-blue span {
+      display: none; /* Span ko chhupa do */
+    }
+
+    .hero-blue h1 {
+      font-size: 1.9rem; /* Text size ko chhota kar dena */
+    }
+  }
+}
+
+.social-links {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.hero-yellow {
+  flex: 1;
+  height: 420px;
+  background-color: var(--yellow);
+  border-radius: 30px;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  img {
+    margin-top: -60px;
+    max-width: 390px;
+    /* margin-bottom: 10px; */
+  }
+}
 
 .logos {
   background-color: var(--base-100);
@@ -351,43 +359,42 @@ h3 {
     padding: 30px;
     display: flex;
     @media (max-width: 1024px) {
-        flex-direction: column;
-        padding: 15px; /* Padding ko thoda reduce karte hain mobile par */
+      flex-direction: column;
+      padding: 15px; /* Padding ko thoda reduce karte hain mobile par */
     }
 
     .left-column {
-        flex: 1;
-        ul {
-            list-style-type: none;
-            gap: 10px;
-            margin-right: 100px; /* Desktop par */
-            margin-bottom: 20px;
-            @media (max-width: 1024px) {
-                margin-right: 0; /* Mobile par right margin ko remove karein */
-            }
-            li {
-                display: inline-block;
-                background-color: var(--blue-400);
-                padding: 10px 20px;
-                border-radius: 15px;
-                margin-bottom: 10px;
-                @media (max-width: 768px) {
-                    display: block; /* Mobile par block mein dikhayein */
-                    text-align: center; /* Text ko center karte hain */
-                }
-            }
-        }
-    }
-}
-
-    .right-column {
       flex: 1;
-      p {
+      ul {
+        list-style-type: none;
+        gap: 10px;
+        margin-right: 100px; /* Desktop par */
         margin-bottom: 20px;
+        @media (max-width: 1024px) {
+          margin-right: 0; /* Mobile par right margin ko remove karein */
+        }
+        li {
+          display: inline-block;
+          background-color: var(--blue-400);
+          padding: 10px 20px;
+          border-radius: 15px;
+          margin-bottom: 10px;
+          @media (max-width: 768px) {
+            display: block; /* Mobile par block mein dikhayein */
+            text-align: center; /* Text ko center karte hain */
+          }
+        }
       }
     }
   }
 
+  .right-column {
+    flex: 1;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
 
 .work-experience {
   .jobs {
@@ -563,11 +570,10 @@ h3 {
       flex: 3;
       margin-top: 22px;
       padding-right: 20px;
-    
     }
 
-    .option{
-    margin-left: -20px;
+    .option {
+      margin-left: -20px;
     }
 
     .chat-box {
@@ -577,51 +583,56 @@ h3 {
       padding: 30px;
       display: flex;
       flex-direction: column;
-      
+
       /* Default text styles */
       h1 {
-          font-size: 24px; /* Default font size */
+        font-size: 24px; /* Default font size */
       }
-  
+
       p {
-          font-size: 20px; /* Default paragraph font size */
+        font-size: 20px; /* Default paragraph font size */
       }
-  
+
       @media (max-width: 768px) {
-          flex: 1;
-          padding: 15px;
-          border-radius: 10px;
-  
-          h1 {
-              font-size: 20px; /* Phone par h1 ka size chhota */
-          }
-  
-          p {
-              font-size: 15px; /* Phone par paragraph ka size chhota */
-          }
+        flex: 1;
+        padding: 15px;
+        border-radius: 10px;
+
+        h1 {
+          font-size: 20px; /* Phone par h1 ka size chhota */
+        }
+
+        p {
+          font-size: 15px; /* Phone par paragraph ka size chhota */
+        }
       }
-  
+
       @media (max-width: 480px) {
-          padding: 10px;
-  
-          h1 {
-              font-size: 18px; /* Aur chhote devices par h1 ka size aur chhota */
-          }
-  
-          p {
-              font-size: 15px; /* Aur chhote devices par paragraph ka size aur chhota */
-          }
+        padding: 10px;
+
+        h1 {
+          font-size: 18px; /* Aur chhote devices par h1 ka size aur chhota */
+        }
+
+        p {
+          font-size: 15px; /* Aur chhote devices par paragraph ka size aur chhota */
+        }
       }
+    }
   }
-  }}
-      
-h4{
-   margin-left: 200px;
-}
-.sir{
- color: #8ecae6;
 }
 
+h4 {
+  margin-left: 200px;
+}
+.sir {
+  color: #8ecae6;
+  text-decoration: none;
+}
+.sir:hover{
+   color: rgb(255, 247, 247);
+   text-decoration: none;
+}
 footer {
   background-color: #023047;
   color: white;
@@ -655,14 +666,14 @@ footer {
   margin: 0;
 }
 
-footer{
+footer {
   margin-bottom: -1000px;
 }
 
 .call-button {
   margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   padding: 15px 30px;
   background-color: #003566;
   color: white;
@@ -679,12 +690,45 @@ footer{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#join{
-    margin-left: -10px;
+#join {
+  margin-left: -10px;
 }
 
-@media (max-width: 480px) {
-  #pic {
-      background-image: url('./images/IMG_1874.JPG'); /* Mobile image ka path */
+#nowdonate {
+  background-color: #143d63; /* Green color */
+  color: white; /* Text color */
+  padding: 15px 35px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make it inline */
+  font-size: 20px; /* Font size */
+  border: none; /* No border */
+  border-radius: 15px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease; /* Smooth transition */
+  margin-top: 30px;
+  margin-left: 50px;
+  border: 3px solid #67e7d6;
+  box-shadow: 0 0 20px rgba(215, 117, 235, 0.8); /* Glow effect on hover */
+
+  
+  @media (max-width: 480px){
+    padding: 6px;
+     font-size: 9px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
   }
+
 }
+
+#nowdonate:hover {
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.8); /* Glow effect on hover */
+  transform: scale(1.05); /* Slightly increase size */
+}
+
+@media (max-width: 480px){
+#nowdonate:hover {
+  box-shadow: none; /* Remove glow effect */
+  transform: none; /* No scaling effect */
+}}

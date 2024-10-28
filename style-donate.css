@@ -1,5 +1,4 @@
-/* Existing styles */
-
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: rgb(244, 241, 187);
@@ -9,65 +8,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-.container {
-  text-align: center;
-  color: #1c1c1c;
-  background-color: #9bc1bc;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  color: #333;
-}
-
-button {
-  background-color: #6a5acd;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #5b5eac;
-}
-
-.donate-form {
-  margin-top: 20px;
-  display: none;
-}
-
-input[type="number"] {
-  padding: 10px;
-  font-size: 16px;
-  width: 200px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.qrcode {
-  margin-top: 15px;
-}
-
-.homePage_link {
-  margin: 30px 0;
-  text-align: center;
-  font-size: 25px;
-  color: #575454;
-}
-.homePage_link a {
-  color: var(--clr);
-  text-decoration: none;
-}
-.homePage_link a:hover {
-  text-decoration: underline;
 }
 
 .content {
@@ -81,65 +21,113 @@ input[type="number"] {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-#qrcode {
-  border: 2px solid #4caf50; /* Border color */
-  padding: 10px; /* Padding around the QR code */
-  display: inline-block; /* Centering */
-  background-color: #f9f9f9; /* Background color */
-  border-radius: 10px; /* Rounded corners */
-  /* width: 200px; */
-
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100%; /* Full height */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+.container {
+  text-align: center;
+  color: #1c1c1c;
+  background-color: #9bc1bc;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Headings and Text */
+h1 {
+  color: #333;
+  font-size: 28px;
+}
+
+/* Buttons */
+button {
+  background-color: #6a5acd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5b5eac;
+}
+
+/* Donation Form */
+.donate-form {
+  margin-top: 20px;
+  display: none;
+}
+
+input[type="number"] {
+  padding: 12px;
+  font-size: 18px;
+  width: 220px;
+  margin-bottom: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #8447ff;
+  box-shadow: 0 0 5px rgba(132, 71, 255, 0.5);
+}
+
+/* QR Code Container */
 .qr-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-input[type="number"] {
-  padding: 12px; /* Thoda zyada padding */
-  font-size: 18px; /* Badi font size */
-  width: 220px; /* Width thoda bada */
-  margin-bottom: 20px;
-  border: 2px solid #4caf50; /* Thicker border */
-  border-radius: 5px; /* Rounded corners */
-  outline: none; /* Focus outline hatana */
-  transition: border-color 0.3s ease; /* Smooth border color change */
+#qrcode {
+  display: none;
+  border: 2px solid #4caf50;
+  padding: 10px;
+  display: inline-block;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-input[type="number"]:focus {
-  border-color: #8447ff; /* Focus hone par border color change */
-  box-shadow: 0 0 5px rgba(132, 71, 255, 0.5); /* Focus hone par shadow effect */
+#scan {
+  display: none;
+  font-size: larger;
+  margin-top: -35px;
 }
 
+/* Thank You Message */
 #thankYouMessage {
   margin-top: 18px;
   display: none;
   font-weight: 400;
-  font-size: 36px; /* Text size */
-  color: #ffffff; /* Text color */
-  text-shadow: 0 0 5px #9c9c9c, /* White glow */ 0 0 10px #564e4e,
-    /* White glow */ 0 0 15px #21177a, /* Light Pink glow */ 0 0 15px #21177a,
-    /* Light Pink glow */ 0 0 25px #21177a,
-    /* Light Pink glow */ 0 0 15px #21177a,
-    /* Light Pink glow */ 0 0 20px #21177a; /* Light Pink glow */
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 0 0 5px #9c9c9c, 0 0 10px #564e4e, 0 0 15px #21177a, 0 0 20px #21177a;
 }
 
-#donatet {
-  font-size: 20px;
+/* Links */
+.homePage_link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 25px;
+  color: #575454;
+}
+
+.homePage_link a {
+  color: var(--clr);
+  text-decoration: none;
+}
+
+.homePage_link a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Styles */
-
 @media (max-width: 1200px) {
   .content {
-    width: 80%; /* Reduce width on medium screens */
+    width: 80%;
   }
 }
 
@@ -194,10 +182,4 @@ input[type="number"]:focus {
   #thankYouMessage {
     font-size: 28px;
   }
-}
-
-#scan {
-  display: none;
-  font-size: larger;
-  margin: -25px;
 }
