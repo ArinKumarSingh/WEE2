@@ -105,7 +105,7 @@ input[type="submit"]:hover {
 .homePage_link {
   margin: 30px 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   color: #666666;
 }
 
@@ -158,17 +158,17 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 480px) {
   .center {
     width: 100%;
-    padding: 10px 5px;
+    padding: 6px 5px;
     margin: 10% auto;
   }
 
   .center h1 {
-    font-size: 22px;
+    font-size: 25px;
   }
 
   .txt_field input {
     height: 55px;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   input[type="submit"] {
@@ -177,3 +177,10 @@ input[type="submit"]:hover {
   }
 }
 
+@media (max-width:480px){
+  .center{
+    padding: 0;
+    margin: 0;
+    
+  }
+}
