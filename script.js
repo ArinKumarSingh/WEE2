@@ -66,7 +66,7 @@ function downloadQR() {
     var qrDataUrl = newCanvas.toDataURL("image/jpg");
     var downloadLink = document.createElement("a");
     downloadLink.href = qrDataUrl;
-    downloadLink.download = "QR_Code.jpg";
+    downloadLink.download = "QR_SSlibrary.jpg";
     downloadLink.click();
   } else {
     alert("QR code not found. Please generate it first.");
