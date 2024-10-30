@@ -95,6 +95,7 @@ input[type="number"]:focus {
   display: none;
   font-size: larger;
   margin-top: -35px;
+  margin-bottom: -10px;
 
   @media(max-width:480px){
     margin-top: 0;
@@ -186,4 +187,10 @@ input[type="number"]:focus {
   #thankYouMessage {
     font-size: 28px;
   }
+}
+#downloadButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin: 15px;/* Optional: space between QR code and button */
 }

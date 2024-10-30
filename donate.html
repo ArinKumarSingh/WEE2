@@ -27,7 +27,13 @@
             Generate QR Code
           </button>
         </div>
-        <div id="scan"><h3>Scan this code and Pay through any UPI</h3></div>
+        <div id="scan"><h3>Download or Scan this code and Pay through any UPI</h3></div>
+        <div id="download"></div>
+
+<div id="downloadButtonContainer">
+  <button id="downloadButton" style="display: none;" onclick="downloadQR()">Download QR Code</button>
+</div>
+
         <div class="qr-container">
           <div id="qrcode" class="qrcode" style="display: none;"></div>
         </div>
